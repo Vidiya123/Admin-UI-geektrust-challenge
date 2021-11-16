@@ -1,0 +1,37 @@
+.save-button {
+  color: white;
+  background-color: #0ced22;
+  width: 30px;
+  padding: 2px;
+  margin-right: 2px;
+  border-radius: 5px;
+  font-size: 8px;
+  border: 1px black solid;
+}
+.input-field {
+  max-width: 88% !important;
+  margin: auto;
+  border-radius: 1px gold;
+  padding-left: 2px;
+  margin-right: 0px;
+}
+.cancel-button {
+  color: white;
+  background-color: red;
+  border: 1px black solid;
+  padding: 2px;
+  width: 40px;
+  border-radius: 5px;
+  font-size: 8px;
+}
+
+@media screen and (min-width: 576px) {
+  .save-button {
+    font-size: 12px;
+    width: 60px;
+  }
+  .cancel-button {
+    font-size: 12px;
+    width: 80px;
+  }
+}

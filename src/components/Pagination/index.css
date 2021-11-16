@@ -1,0 +1,41 @@
+.pagination-number-icon {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  color: white;
+  border-radius: 20px;
+  margin: auto;
+}
+.active-page {
+  background: #024a15;
+  box-shadow: 5px 10px 18px #888888;
+}
+.active-button {
+  background-color: #1e8aa8;
+}
+
+.in-active-button {
+  background-color: grey;
+}
+
+@media screen and (max-width: 575px) and (min-width: 361px) {
+  .pagination-number-icon {
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .pagination-number-icon {
+    height: 18px;
+    width: 18px;
+    font-size: 10px;
+    border-radius: 9px;
+    margin: 1px;
+  }
+}
