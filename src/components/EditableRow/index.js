@@ -1,42 +1,43 @@
-import './index.css'
+import "./index.css";
 
-const EditableRow = props => {
+const EditableRow = (props) => {
   const {
     id,
     userName,
     userEmail,
     userRole,
+
     onChangeRowSelection,
     cancelEdit,
     isRowSelected,
 
-    onChangeUserName,
-    onChangeUserEmail,
-    onChangeUserRole,
-  } = props
+    handleUsernameChange,
+    handleUserEmailChange,
+    handleUserRoleChange,
+  } = props;
 
-  const onClickedCancelEdit = () => {
-    cancelEdit(id)
-  }
+  const handleCancelEdit = () => {
+    cancelEdit(id);
+  };
 
   const onChangeRowSelected = () => {
-    onChangeRowSelection(id)
-  }
+    onChangeRowSelection(id);
+  };
 
-  const editUserName = event => {
-    onChangeUserName(event)
-  }
+  const editUserName = (event) => {
+    handleUsernameChange(event);
+  };
 
-  const editUserEmail = event => {
-    onChangeUserEmail(event)
-  }
+  const editUserEmail = (event) => {
+    handleUserEmailChange(event);
+  };
 
-  const editUserRole = event => {
-    onChangeUserRole(event)
-  }
+  const editUserRole = (event) => {
+    handleUserRoleChange(event);
+  };
 
-  const highLightRowClassName = isRowSelected ? 'row-high-light' : ''
-  const separatorLine = isRowSelected ? 'separator-highlight' : 'separator'
+  const highLightRowClassName = isRowSelected ? "row-high-light" : "";
+  const separatorLine = isRowSelected ? "separator-highlight" : "separator";
   return (
     <li className={`table-row ${highLightRowClassName}`}>
       <input
@@ -76,7 +77,7 @@ const EditableRow = props => {
 
         <button
           value={id}
-          onClick={onClickedCancelEdit}
+          onClick={handleCancelEdit}
           type="button"
           className="cancel-button"
         >
@@ -84,7 +85,7 @@ const EditableRow = props => {
         </button>
       </div>
     </li>
-  )
-}
+  );
+};
 
-export default EditableRow
+export default EditableRow;

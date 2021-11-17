@@ -1,13 +1,13 @@
 .pagination-number-icon {
-  height: 40px;
-  width: 40px;
+  height: 34px;
+  width: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
   outline: none;
   color: white;
-  border-radius: 20px;
-  margin: auto;
+  border-radius: 17px;
+  margin: 2px;
 }
 .active-page {
   background: #024a15;
@@ -27,6 +27,7 @@
     width: 20px;
     font-size: 10px;
     border-radius: 10px;
+    margin: 5px;
   }
 }
 

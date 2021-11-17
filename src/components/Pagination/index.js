@@ -1,16 +1,21 @@
-import './index.css'
+import "./index.css";
 
-const Pagination = props => {
-  const {buttonDetails, isButtonDisabled, handlePageChange, currentPage} = props
+const Pagination = (props) => {
+  const {
+    buttonDetails,
+    isButtonDisabled,
+    handlePageChange,
+    currentPage,
+  } = props;
   const buttonStatusClassName = isButtonDisabled
-    ? 'in-active-button'
-    : 'active-button'
-  const {id, name} = buttonDetails
-  const onClickPageChanged = event => {
-    handlePageChange(event)
-  }
+    ? "in-active-button"
+    : "active-button";
+  const { id, name } = buttonDetails;
+  const onClickPageChanged = (event) => {
+    handlePageChange(event);
+  };
   const currentPageClassName =
-    currentPage === id ? 'active-page' : buttonStatusClassName
+    currentPage === id ? "active-page" : buttonStatusClassName;
 
   return (
     <button
@@ -22,7 +27,7 @@ const Pagination = props => {
     >
       {id}
     </button>
-  )
-}
+  );
+};
 
-export default Pagination
+export default Pagination;

@@ -1,25 +1,25 @@
-import {FaRegEdit} from 'react-icons/fa'
-import {MdDeleteOutline} from 'react-icons/md'
-import './index.css'
+import { FaRegEdit } from "react-icons/fa";
+import { MdDeleteOutline } from "react-icons/md";
+import "./index.css";
 
-const ReadOnlyRow = props => {
-  const {userDetails, onChangeRowSelection, setEditRowId, deleteUser} = props
-  const {name, email, role, isRowSelected, id} = userDetails
+const ReadOnlyRow = (props) => {
+  const { userDetails, onChangeRowSelection, setEditRowId, deleteUser } = props;
+  const { name, email, role, isRowSelected, id } = userDetails;
 
   const onClickedDeleteUserRow = () => {
-    deleteUser(id)
-  }
+    deleteUser(id);
+  };
 
   const onChangeRowSelected = () => {
-    onChangeRowSelection(id)
-  }
+    onChangeRowSelection(id);
+  };
 
   const onClickedEditRow = () => {
-    setEditRowId(id)
-  }
+    setEditRowId(id);
+  };
 
-  const highLightRowClassName = isRowSelected ? 'row-high-light' : ''
-  const separatorLine = isRowSelected ? 'separator-highlight' : 'separator'
+  const highLightRowClassName = isRowSelected ? "row-high-light" : "";
+  const separatorLine = isRowSelected ? "separator-highlight" : "separator";
 
   return (
     <li className={`table-row ${highLightRowClassName}`}>
@@ -55,7 +55,7 @@ const ReadOnlyRow = props => {
         </button>
       </div>
     </li>
-  )
-}
+  );
+};
 
-export default ReadOnlyRow
+export default ReadOnlyRow;

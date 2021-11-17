@@ -1,6 +1,6 @@
-import AdminUI from './components/AdminUI'
-import './App.css'
+import AdminUI from "./components/AdminUI/index";
+import "./App.css";
 
-const App = () => <AdminUI />
+const App = () => <AdminUI />;
 
-export default App
+export default App;

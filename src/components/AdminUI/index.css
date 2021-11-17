@@ -1,23 +1,26 @@
 * {
   box-sizing: border-box;
 }
-.products-loader-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 50vh;
-  align-items: center;
-}
+
 .app-container {
   display: flex;
   justify-content: center;
   min-height: 100vh;
   width: 100%;
   background: white;
-
+  font-family: "Times New Roman", Times, serif;
   overflow-x: auto;
 }
-
+.loader-container {
+  display: flex;
+  align-items: center;
+  color: #d6256f;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 200px;
+  max-height: 400px;
+  flex-wrap: 1;
+}
 .responsive-container {
   max-width: 1140px;
   width: 70%;
@@ -38,7 +41,7 @@
 
 .input {
   color: #1e293b;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   border: 1px solid #d7dfe9;
   border-radius: 12px;
   width: 100%;
@@ -55,7 +58,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  color: #2388b0;
+  color: #eb1e0f;
   justify-content: center;
   flex-direction: column;
   min-height: 400px;
@@ -63,9 +66,14 @@
 .failure-heading {
   font-size: 24px;
 }
+
+.loader-heading {
+  font-size: 24px;
+}
+
 .retry-button {
   color: white;
-  background-color: #cc7ea9;
+  background-color: #ca2931;
   padding: 12px;
   width: 100px;
   border-radius: 5px;
@@ -126,6 +134,7 @@
   align-items: center;
   margin: auto;
   justify-content: center;
+  padding: 10px;
 }
 .footer-section {
   display: flex;
@@ -159,7 +168,8 @@
   display: flex;
   list-style-type: none;
   flex-direction: column;
-  background-color: #2cc9c9;
+  background-color: rgb(13, 194, 185);
+  min-width: 360px;
   border: 1px solid #cbd5e1;
 }
 
@@ -178,13 +188,35 @@
 
 .table-header-cell {
   color: #334155;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 16px;
   font-weight: 800;
   margin-left: 22px;
 }
 
-@media screen and (min-width: 361px) and (max-width: 575px) {
+@media screen and (min-width: 361px) and (max-width: 600px) {
+  .app-container {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 140%;
+  }
+
+  .loader-heading {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .app-container {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 110%;
+  }
+}
+
+@media screen and (min-width: 361px) and (max-width: 800px) {
   .input {
     border-radius: 12px;
     width: 40%;
@@ -195,7 +227,6 @@
     margin-right: 10px;
     outline: none;
     margin-bottom: 10px;
-    background: yellow;
     margin-top: 10px;
     font-size: 12px;
   }
@@ -222,13 +253,6 @@
     font-size: 10px;
     padding: 4px;
   }
-  .app-container {
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    width: 140%;
-    padding: 4px;
-  }
 
   .responsive-container {
     width: 100%;
@@ -238,6 +262,10 @@
 }
 
 @media screen and (max-width: 360px) {
+  .loader-heading {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
   .input {
     border-radius: 12px;
     width: 40%;
@@ -253,10 +281,10 @@
   }
 
   .pagination-container {
-    width: 60%;
+    width: 100%;
     display: flex;
     align-items: center;
-    margin: auto;
+    margin-left: 20px;
     justify-content: space-around;
   }
 
@@ -276,6 +304,7 @@
     height: 30px;
     width: 30px;
     font-size: 10px;
+    padding: 5px;
   }
   .delete-selected-button {
     width: 80px;
@@ -339,6 +368,6 @@
     margin-right: 2px;
   }
   .failure-heading {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
